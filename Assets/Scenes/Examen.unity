@@ -532,6 +532,10 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1957168918}
+    - target: {fileID: 8326500295807653902, guid: cba9e7f26cda84e3888475c6af7b760b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8978856369309266200, guid: cba9e7f26cda84e3888475c6af7b760b, type: 3}
       propertyPath: m_Name
       value: Cofre

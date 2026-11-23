@@ -63,8 +63,20 @@ namespace ClaseProgAvanzada
             if (distance > interactionDistance) return;
 
             if (Keyboard.current.eKey.wasPressedThisFrame) Interact();
-            if (Keyboard.current.lKey.wasPressedThisFrame) Lock();
-            if (Keyboard.current.uKey.wasPressedThisFrame) Unlock();
+            if (Keyboard.current.uKey.wasPressedThisFrame)
+            {
+                if (isLocked) Unlock();
+                else Lock();
+            }
+        }
+
+        private void OnGUI()
+        {
+            GUIStyle style = new GUIStyle();
+            style.fontSize = 12;
+            style.normal.textColor = Color.white;
+            GUI.Label(new Rect(8, 8, 220, 36),
+                "E: ABRIR COFRE\nU: BLOQUEAR COFRE", style);
         }
 
         public void ChangeState(IChestState newState)
